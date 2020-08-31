@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
+/*Global styles*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: "Source Sans Pro", sans-serif;
+  --secondary-font: "Herr Von Muellerhoff", cursive;
+  --body-font: "Cabin", sans-serif;
+  --main-font-color-dark: #252525;
+  --secondary-font-color: #c59d5f;
+  --body-font-color: #515151;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 10px;
+  color: var(--body-font-color);
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+section {
+  padding: 3.9rem 0;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1.6rem;
+}
+/* Navigation
+================================ */
+nav {
+  font-size: 1.6rem;
+}
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+.brand {
+  /* float: left; */
+  padding: 5px 0;
+  text-align: center;
+  width: 85%;
+}
+.brand .navbar-brand {
+  transform: translateX(2rem);
+  /* float: none; */
+}
+div .navbar-brand {
+  font-size: 2.5rem;
+  padding: 0px;
+  margin-left: 0.5rem;
+  border-bottom: 3px solid white;
+}
+li.active {
+  width: 20%;
+  padding: 0 5px;
+  border-bottom: 2px solid #ffffff;
+}
+li {
+  margin: 1rem 1.4rem 1rem 0;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.navbar-bg-custom {
+  background: #0c0c13;
+}
+/* Jumbotron 
+=====================*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("images/hero.jpg") center no-repeat;
+  background-size: cover;
+}
+.sub-headline {
+  font-size: 11.5rem;
+  font-family: var(--secondary-font);
+  color: var(--secondary-font-color);
+  font-weight: 100;
+  line-height: 0.4;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.first-letter {
+  text-transform: uppercase;
+  font-size: 10.3rem;
+}
+.headline {
+  color: #ffffff;
+  font-size: 5.7rem;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-right: -0.5rem;
+  text-align: center;
+}
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 100%;
+  max-width: 8.4rem;
+  height: 0.25rem;
+  background-color: #ffffff;
+  position: relative;
+}
+.line-right::before,
+.line-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.6rem solid transparent;
+}
+.line-right::before {
+  border-right-color: #fff;
+  right: 0;
+}
+.line-left::before {
+  border-left-color: #fff;
+  left: 0;
+}
+.asterisk {
+  font-size: 1.2rem;
+  color: var(--secondary-font-color);
+  margin: 0 1.6rem;
+}
+.headline-description h5 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  text-align: center;
+}
+button {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.5s;
+}
+.cta-btn a {
+  color: var(--body-font-color);
+  text-decoration: none;
+}
+.cta-btn:hover,
+.cta-btn:focus {
+  color: #ffffff;
+  background: var(--secondary-font-color);
+}
+
+/* Our Story
+============================ */
+.headline-dark {
+  color: var(--main-font-color-dark);
+  font-size: 3rem;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-right: -0.5rem;
+  text-align: center;
+}
+.global-headline .sub-headline {
+  line-height: 0.52;
+}
+.global-headline .asterisk {
+  color: var(--body-font-color);
+}
+
+button {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  position: relative;
+}
+.about-cta {
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+  position: relative;
+  transition: color 0.3s;
+  padding: 0.7rem 0.8rem;
+}
+.about-cta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-font-color);
+  transition: background-color 0.5s;
+}
+.about-cta:hover,
+.about-cta:focus {
+  color: var(--main-font-color-dark);
+}
+.about-cta:hover::before,
+.about-cta:focus::before {
+  background-color: var(--main-font-color-dark);
+}
+
+/* Tasteful Recipes
+=============================*/
+.tasteful-recipes {
+  background: url("./images/tasteful-recipes.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Discover our menu
+=================================== */
+.gallery {
+  padding: 5rem;
+  overflow: hidden;
+}
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin: 1rem 0;
+}
+.restaurant-description {
+  padding: 1rem;
+}
+.restaurant-description p {
+  line-height: 2;
+}
+.menu-cta {
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+  background: #ffffff;
+  position: relative;
+  transition: color 0.3s;
+  padding: 0.7rem 0.8rem;
+  text-decoration: none;
+}
+.menu-cta::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  height: 2px;
+  left: 0;
+  background-color: var(--secondary-font-color);
+}
+.menu-cta:hover,
+.menu-cta:focus {
+  color: var(--main-font-color-dark);
+}
+.menu-cta:hover::before,
+.menu-cta:focus::before {
+  background-color: var(--main-font-color-dark);
+}
+/* Perfect blend */
+.perfect-blend {
+  background: url("./images/perfect-blend.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* RESPONSIVENESS 
+=============================*/
+@media screen and (min-width: 400px) {
+  /* Navigation
+============================ */
+  .brand .navbar-brand {
+    transform: translateX(5rem);
+  }
+}
+
+@media screen and (min-width: 991px) {
+  /* Navigation
+============================ */
+  .brand {
+    text-align: left;
+  }
+  li {
+    margin: 1rem 6.4rem 1rem 0;
+  }
+  /* Our Story
+============================ */
+  .restaurant-description {
+    padding: 3rem;
+  }
+  .restaurant-description {
+    padding: 5rem;
+  }
+}
