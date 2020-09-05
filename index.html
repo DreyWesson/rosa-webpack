@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="/fontawesome/css/all.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="css.css" />
+
     <title>Document</title>
   </head>
   <body class="">
@@ -105,7 +105,7 @@
                   nobis.
                 </p>
                 <button
-                  class="btn btn-lg about-cta about"
+                  class="btn btn-lg cta about"
                   onclick="location.href='#'"
                 >
                   About Us
@@ -113,7 +113,7 @@
               </div>
             </div>
           </div>
-          <div class="restaurant-info-img animate-right col-md-6">
+          <div class="restaurant-info-img col-md-6">
             <div class="d-flex h-100">
               <div class="m-auto py-5 fromRight">
                 <img src="images/our-story-1.jpg" alt="" />
@@ -144,7 +144,7 @@
     <section class="discover-our-menu">
       <div class="restaurant-info row">
         <div class="gallery col-md-6 scaleUp-v1">
-          <div class="image-group padding-right animate-left">
+          <div class="image-group">
             <img src="images/menu-group-1.jpg" alt="" />
             <img src="images/menu-group-2.jpg" alt="" />
             <img src="images/menu-group-3.jpg" alt="" />
@@ -166,7 +166,7 @@
                 eaque mollitia maiores iste consequuntur, est quibusdam
                 obcaecati possimus sit officiis modi laborum, ea dolorum nobis.
               </p>
-              <button class="btn btn-lg menu-cta" onclick="location.href='#'">
+              <button class="btn btn-lg cta" onclick="location.href='#'">
                 View the full menu
               </button>
             </div>
@@ -175,7 +175,7 @@
       </div>
     </section>
     <!-- Discover our menu ends -->
-    <section class="perfect-blend between">
+    <section class="perfect-blend">
       <div class="global-headline">
         <div class="d-flex" style="height: 65vh">
           <div class="m-auto">
@@ -192,26 +192,34 @@
       </div>
     </section>
     <!-- Perfect blend ends -->
-    <!-- <section class="culinary-delight">
-      <div class="container">
-        <div class="restaurant-info">
-          <div class="restaurant-description padding-right animate-left">
-            <div class="global-headline">
-              <h2 class="sub-headline">
-                <span class="first-letter">C</span>ulinary
-              </h2>
-              <h1 class="headline headline-dark">Delight</h1>
-              <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+    <section class="culinary-delight">
+      <div class="restaurant-info row">
+        <div class="restaurant-description col-md-6 text-center scaleUp-v3">
+          <div class="d-flex h-100">
+            <div class="m-auto">
+              <div class="global-headline">
+                <h2 class="sub-headline">
+                  <span class="first-letter">C</span>ulinary
+                </h2>
+                <h1 class="headline headline-dark">Delight</h1>
+                <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                eaque mollitia maiores iste consequuntur, est quibusdam
+                obcaecati possimus sit officiis modi laborum, ea dolorum nobis.
+              </p>
+              <button class="btn btn-lg cta" onclick="location.href='#'">
+                Make reservation
+              </button>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-              eaque mollitia maiores iste consequuntur, est quibusdam obcaecati
-              possimus sit officiis modi laborum, ea dolorum nobis.
-            </p>
-            <a href="#" class="btn body-btn">Make reservation</a>
           </div>
-          <div class="image-group">
+        </div>
+        <div class="image-group img-v2 col-md-6">
+          <div class="swipe-down">
             <img class="animate-top" src="images/delight-group-1.jpg" alt="" />
+          </div>
+          <div class="swipe-up">
             <img
               class="animate-bottom"
               src="images/delight-group-2.jpg"
@@ -220,15 +228,18 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- culinary-delight ends -->
-    <!-- <footer>
-      <div class="container">
+    <footer>
+      <div class="container text-center">
         <div class="back-to-top">
-          <a href="" id="hero"><i class="fas fa-chevron-up"></i></a>
+          <div class="">
+
+            <a href="#" id=""><span><i class="fas fa-chevron-up pointer"></i></span></a>
+          </div>
         </div>
         <div class="footer-content">
-          <div class="footer-content-about animate-top">
+          <div class="footer-content-about scaleUp-v4">
             <h4>About Rosa</h4>
             <div class="asterisk"><i class="fas fa-asterisk"></i></div>
             <p>
@@ -238,49 +249,57 @@
               accusamus nobis odio suscipit eveniet.
             </p>
           </div>
-          <div class="footer-content-divider animate-bottom">
-            <div class="social-media">
-              <h4>Follow along</h4>
-              <ul class="social-icons">
-                <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-facebook-square"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-pinterest"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-tripadvisor"></i></a>
-                </li>
-              </ul>
+          <div class="footer-content-divider row justify-content-around">
+            <div class="social-media d-flex w100">
+              <div class="m-auto">
+                <h4>Follow along</h4>
+                <ul class="social-icons d-flex justify-content-between">
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="newsletter-container">
+            <div class="newsletter-container m-4">
               <h4>Newsletter</h4>
               <form action="" class="newsletter-form">
-                <input
-                  type="text"
-                  class="newsletter-input"
-                  placeholder="Your email address..."
-                />
-                <button class="newsletter-btn" type="submit">
-                  <i class="fas fa-envelope"></i>
-                </button>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control ml-2"
+                    placeholder="Your email address..."
+                    aria-label="email"
+                    aria-describedby="basic-addon1"
+                  />
+                  <button class="btn input-group-append">
+                    <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+                    <i class="fas fa-envelope input-group-text"></i>
+                  </button>
+                </div>
               </form>
-            </div>
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
+
+
     <script src="/jquery/jquery-3.5.1.min.js"></script>
     <script src="/popper/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
-    <script src="main.js"></script>
+    <script src="gsap.js"></script>
   </body>
 </html>

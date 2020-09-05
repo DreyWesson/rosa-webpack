@@ -3,7 +3,8 @@ const toggler = document.querySelector(".navbar-toggler"),
   timeLn = new TimelineMax({ paused: true, reversed: true }),
   tl = new TimelineMax();
 tl2 = new TimelineMax();
-
+//
+// NAVIGATION BAR
 // if (window.innerWidth <= 991) {
 toggler.addEventListener("click", (_) => {
   const navbar = document.querySelector(".navbar");
@@ -25,12 +26,14 @@ toggler.addEventListener("click", (_) => {
 });
 // }
 
+// HERO
 tl.from(".headline", { scale: 2, opacity: 0 })
   .from(".sub-headline", { y: 30, opacity: 0 })
   .from(".asterisk", { rotation: 360, opacity: 0 })
   .from(".line", { opacity: 0 })
   .from(".single-animation", { y: 10, opacity: 0 });
 
+// DISCOVER
 gsap.from(".fromLeft", {
   scrollTrigger: {
     trigger: ".fromLeft",
@@ -49,6 +52,8 @@ gsap.from(".fromRight", {
   x: 250,
   opacity: 0,
 });
+
+// TASTEFUL RECIPES
 gsap.from(".animate-top", {
   scrollTrigger: {
     trigger: ".animate-top",
@@ -67,15 +72,8 @@ gsap.from(".animate-bottom", {
   y: 100,
   opacity: 0,
 });
-gsap.from(".scaleUp", {
-  scrollTrigger: {
-    trigger: ".scaleUp",
-    start: "200px 80%",
-  },
-  duration: 2,
-  scale: 1.3,
-  opacity: 0,
-});
+
+// DISCOVER MENU
 gsap.from(".scaleUp-v1", {
   scrollTrigger: {
     trigger: ".scaleUp-v1",
@@ -95,6 +93,7 @@ gsap.from(".scaleUp-v2", {
   opacity: 0,
 });
 
+// PERFECT BLEND
 gsap.from(".animate-top-v2", {
   scrollTrigger: {
     trigger: ".animate-top-v2",
@@ -111,5 +110,63 @@ gsap.from(".animate-bottom-v2", {
   },
   duration: 1,
   y: 100,
+  opacity: 0,
+});
+
+// Culinary DELIGHT
+gsap.from(".scaleUp-v3", {
+  scrollTrigger: {
+    trigger: ".scaleUp-v3",
+    start: "200px 80%",
+  },
+  duration: 2,
+  scale: 1.3,
+  opacity: 0,
+});
+gsap.from(".swipe-up", {
+  scrollTrigger: {
+    trigger: ".swipe-up",
+    start: "50px 80%",
+  },
+  duration: 1,
+  y: 150,
+  opacity: 0,
+});
+gsap.from(".swipe-down", {
+  scrollTrigger: {
+    trigger: ".swipe-up",
+    start: "50px 80%",
+  },
+  duration: 1,
+  y: -150,
+  opacity: 0,
+});
+
+// FOOTER
+let tl3 = new TimelineMax({ repeat: -1, yoyo: false });
+tl3.from(".pointer", { y: 15, opacity: 0, duration: 1 });
+tl3.from(".pointer", { y: 15, opacity: 0, duration: 1 });
+gsap.from(".scaleUp-v4", {
+  scrollTrigger: {
+    trigger: ".scaleUp-v4",
+  },
+  scale: 1.3,
+  opacity: 0,
+});
+gsap.from(".social-media", {
+  scrollTrigger: {
+    trigger: ".social-media",
+  },
+  duration: 1,
+  x: -250,
+  opacity: 0,
+});
+
+gsap.from(".newsletter-container", {
+  scrollTrigger: {
+    trigger: ".newsletter-container",
+  },
+  duration: 1,
+  x: 250,
   opacity: 0,
 });
