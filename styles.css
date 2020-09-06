@@ -283,7 +283,7 @@ button {
   padding: 2rem 4rem;
 }
 
-/* RESPONSIVENESS 
+/* FOOTER
 =============================*/
 footer {
   background: #000;
@@ -327,17 +327,7 @@ footer {
 .social-icons li a {
   color: var(--secondary-font-color);
 }
-/* .newsletter-input {
-  max-width: 5rem;
-  padding: 0.6rem 7rem 0.6rem 0.6rem;
-} */
-/* button.newsletter-btn {
-  transform: translateX(-110%);
-}
-button .fa-envelope {
-  font-size: 1.6rem;
-  border: none;
-} */
+
 .input-group-append {
   position: relative;
   right: 9px;
@@ -359,6 +349,9 @@ button .fa-envelope {
   .image-group.img-v2 {
     padding: 2.5rem 4rem;
   }
+  .restaurant-description {
+    padding: 3rem;
+  }
 }
 
 @media screen and (min-width: 991px) {
@@ -372,9 +365,7 @@ button .fa-envelope {
   }
   /* Our Story
 ============================ */
-  .restaurant-description {
-    padding: 3rem;
-  }
+
   .restaurant-description {
     padding: 5rem;
   }

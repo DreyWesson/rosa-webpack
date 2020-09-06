@@ -56,38 +56,325 @@ header {
   padding: 5px 0;
   text-align: center;
   width: 85%;
+  .navbar-brand {
+    transform: translateX(2rem);
+    /* float: none; */
+    font-size: 2.5rem;
+    padding: 0px;
+    margin-left: 0.5rem;
+    border-bottom: 3px solid white;
+  }
 }
-.brand .navbar-brand {
-  transform: translateX(2rem);
-  /* float: none; */
-}
-div .navbar-brand {
-  font-size: 2.5rem;
-  padding: 0px;
-  margin-left: 0.5rem;
-  border-bottom: 3px solid white;
-}
-li.active {
-  width: 20%;
-  padding: 0 5px;
-  border-bottom: 2px solid #ffffff;
-}
+
 li {
   list-style: none;
   margin: 1rem 1.4rem 1rem 0;
+  &.active {
+    width: 20%;
+    padding: 0 5px;
+    border-bottom: 2px solid #ffffff;
+  }
 }
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.custom-toggler {
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  &.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .navbar-bg-custom {
+    background: #0c0c13;
+  }
 }
 
-.custom-toggler.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.6);
+/* Jumbotron 
+=====================*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("/images/hero.jpg") center no-repeat;
+  background-size: cover;
 }
-.navbar-bg-custom {
-  background: #0c0c13;
+.sub-headline {
+  font-size: 11.5rem;
+  font-family: $secondary-font;
+  color: $secondary-font-color;
+  font-weight: 100;
+  line-height: 0.4;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.first-letter {
+  text-transform: uppercase;
+  font-size: 10.3rem;
+}
+.headline {
+  color: #ffffff;
+  font-size: 5.7rem;
+  font-family: $main-font;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-right: -0.5rem;
+  text-align: center;
+}
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 100%;
+  max-width: 8.4rem;
+  height: 0.25rem;
+  background-color: #ffffff;
+  position: relative;
+  &.line-right::before,
+  &.line-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0.6rem solid transparent;
+  }
+  &.line-right::before {
+    border-right-color: #fff;
+    right: 0;
+  }
+  &.line-left::before {
+    border-left-color: #fff;
+    left: 0;
+  }
+}
+.asterisk {
+  font-size: 1.2rem;
+  color: $secondary-font-color;
+  margin: 0 1.6rem;
+}
+.headline-description h5 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  text-align: center;
+}
+button {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.5s;
+  a {
+    color: $body-font-color;
+    text-decoration: none;
+  }
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background: $secondary-font-color;
+  }
+}
+
+/* Our Story
+============================ */
+.headline-dark {
+  color: $main-font-color-dark;
+  font-size: 3rem;
+  font-family: $main-font;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-right: -0.5rem;
+  text-align: center;
+}
+.global-headline {
+  .sub-headline {
+    line-height: 0.52;
+  }
+  .asterisk {
+    color: $body-font-color;
+  }
+}
+
+button {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  position: relative;
+  &.cta {
+    font-size: 1.5rem;
+    color: $secondary-font-color;
+    position: relative;
+    transition: color 0.3s;
+    padding: 0.7rem 0.8rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $secondary-font-color;
+      transition: background-color 0.5s;
+    }
+    &:hover,
+    &:focus {
+      color: $main-font-color-dark;
+    }
+    &:hover::before,
+    &:focus::before {
+      background-color: $main-font-color-dark;
+    }
+  }
+}
+
+/* Tasteful Recipes
+=============================*/
+.tasteful-recipes {
+  background: url("/images/tasteful-recipes.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Discover our menu
+=================================== */
+.gallery {
+  padding: 5rem;
+  overflow: hidden;
+}
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin: 1rem 0;
+}
+.restaurant-description {
+  padding: 1rem;
+  p {
+    line-height: 2;
+    padding: 2rem;
+  }
+}
+
+/* Perfect blend */
+.perfect-blend {
+  background: url("/images/perfect-blend.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/* Culinary Delight
+=============================*/
+.image-group.img-v2 {
+  padding: 2rem 4rem;
+}
+
+/* RESPONSIVENESS 
+=============================*/
+footer {
+  background: #000;
+  color: #ffffff;
+  padding-bottom: 1rem;
+  .footer-content {
+    h4 {
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      font-weight: 100;
+      letter-spacing: 3px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    p {
+      max-width: 50ch;
+      margin: 0 auto;
+      padding: 2rem 0;
+      font-size: 1.6rem;
+      overflow: hidden;
+      line-height: 2;
+    }
+  }
+  .back-to-top {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #000;
+    transform: translateY(-30px);
+    padding: 10px 20px;
+    a {
+      color: #ffffff;
+    }
+  }
+  .social-icons li {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    a {
+      color: $secondary-font-color;
+    }
+  }
+  .input-group-append {
+    button {
+      background: #ffffff;
+      font-size: 1.4rem;
+      padding: 1px;
+    }
+  }
+}
+
+/* RESPONSIVENESS 
+=============================*/
+@media screen and (min-width: 400px) {
+  /* Navigation
+============================ */
+  .brand .navbar-brand {
+    transform: translateX(5rem);
+  }
+  .image-group.img-v2 {
+    padding: 2.5rem 4rem;
+  }
+  .restaurant-description {
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  /* Navigation
+============================ */
+  .brand {
+    text-align: left;
+  }
+  li {
+    margin: 1rem 6.4rem 1rem 0;
+  }
+  /* Our Story
+============================ */
+
+  .restaurant-description {
+    padding: 5rem;
+  }
+  .image-group.img-v2 {
+    padding: 4rem 7rem;
+  }
+  footer {
+    background: #000;
+    color: #ffffff;
+    height: 65vh;
+  }
 }

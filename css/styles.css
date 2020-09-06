@@ -48,25 +48,21 @@ header {
   padding: 5px 0;
   text-align: center;
   width: 85%; }
-
-.brand .navbar-brand {
-  transform: translateX(2rem);
-  /* float: none; */ }
-
-div .navbar-brand {
-  font-size: 2.5rem;
-  padding: 0px;
-  margin-left: 0.5rem;
-  border-bottom: 3px solid white; }
-
-li.active {
-  width: 20%;
-  padding: 0 5px;
-  border-bottom: 2px solid #ffffff; }
+  .brand .navbar-brand {
+    transform: translateX(2rem);
+    /* float: none; */
+    font-size: 2.5rem;
+    padding: 0px;
+    margin-left: 0.5rem;
+    border-bottom: 3px solid white; }
 
 li {
   list-style: none;
   margin: 1rem 1.4rem 1rem 0; }
+  li.active {
+    width: 20%;
+    padding: 0 5px;
+    border-bottom: 2px solid #ffffff; }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
@@ -79,5 +75,246 @@ li {
 .custom-toggler.navbar-toggler {
   border-color: rgba(255, 255, 255, 0.6); }
 
-.navbar-bg-custom {
+.custom-toggler .navbar-bg-custom {
   background: #0c0c13; }
+
+/* Jumbotron 
+=====================*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("/images/hero.jpg") center no-repeat;
+  background-size: cover; }
+
+.sub-headline {
+  font-size: 11.5rem;
+  font-family: "Herr Von Muellerhoff", cursive;
+  color: #c59d5f;
+  font-weight: 100;
+  line-height: 0.4;
+  text-align: center;
+  letter-spacing: 2px; }
+
+.first-letter {
+  text-transform: uppercase;
+  font-size: 10.3rem; }
+
+.headline {
+  color: #ffffff;
+  font-size: 5.7rem;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-right: -0.5rem;
+  text-align: center; }
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.line {
+  width: 100%;
+  max-width: 8.4rem;
+  height: 0.25rem;
+  background-color: #ffffff;
+  position: relative; }
+  .line.line-right::before, .line.line-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0.6rem solid transparent; }
+  .line.line-right::before {
+    border-right-color: #fff;
+    right: 0; }
+  .line.line-left::before {
+    border-left-color: #fff;
+    left: 0; }
+
+.asterisk {
+  font-size: 1.2rem;
+  color: #c59d5f;
+  margin: 0 1.6rem; }
+
+.headline-description h5 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  text-align: center; }
+
+button {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px; }
+
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.5s; }
+  .cta-btn a {
+    color: #515151;
+    text-decoration: none; }
+  .cta-btn:hover, .cta-btn:focus {
+    color: #ffffff;
+    background: #c59d5f; }
+
+/* Our Story
+============================ */
+.headline-dark {
+  color: #252525;
+  font-size: 3rem;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-right: -0.5rem;
+  text-align: center; }
+
+.global-headline .sub-headline {
+  line-height: 0.52; }
+
+.global-headline .asterisk {
+  color: #515151; }
+
+button {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  position: relative; }
+  button.cta {
+    font-size: 1.5rem;
+    color: #c59d5f;
+    position: relative;
+    transition: color 0.3s;
+    padding: 0.7rem 0.8rem; }
+    button.cta::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #c59d5f;
+      transition: background-color 0.5s; }
+    button.cta:hover, button.cta:focus {
+      color: #252525; }
+    button.cta:hover::before, button.cta:focus::before {
+      background-color: #252525; }
+
+/* Tasteful Recipes
+=============================*/
+.tasteful-recipes {
+  background: url("/images/tasteful-recipes.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+/* Discover our menu
+=================================== */
+.gallery {
+  padding: 5rem;
+  overflow: hidden; }
+
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin: 1rem 0; }
+
+.restaurant-description {
+  padding: 1rem; }
+  .restaurant-description p {
+    line-height: 2;
+    padding: 2rem; }
+
+/* Perfect blend */
+.perfect-blend {
+  background: url("/images/perfect-blend.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+/* Culinary Delight
+=============================*/
+.image-group.img-v2 {
+  padding: 2rem 4rem; }
+
+/* RESPONSIVENESS 
+=============================*/
+footer {
+  background: #000;
+  color: #ffffff;
+  padding-bottom: 1rem; }
+  footer .footer-content h4 {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    overflow: hidden; }
+  footer .footer-content p {
+    max-width: 50ch;
+    margin: 0 auto;
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    overflow: hidden;
+    line-height: 2; }
+  footer .back-to-top {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #000;
+    transform: translateY(-30px);
+    padding: 10px 20px; }
+    footer .back-to-top a {
+      color: #ffffff; }
+  footer .social-icons li {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0; }
+    footer .social-icons li a {
+      color: #c59d5f; }
+  footer .input-group-append button {
+    background: #ffffff;
+    font-size: 1.4rem;
+    padding: 1px; }
+
+/* RESPONSIVENESS 
+=============================*/
+@media screen and (min-width: 400px) {
+  /* Navigation
+============================ */
+  .brand .navbar-brand {
+    transform: translateX(5rem); }
+  .image-group.img-v2 {
+    padding: 2.5rem 4rem; }
+  .restaurant-description {
+    padding: 3rem; } }
+
+@media screen and (min-width: 991px) {
+  /* Navigation
+============================ */
+  .brand {
+    text-align: left; }
+  li {
+    margin: 1rem 6.4rem 1rem 0; }
+  /* Our Story
+============================ */
+  .restaurant-description {
+    padding: 5rem; }
+  .image-group.img-v2 {
+    padding: 4rem 7rem; }
+  footer {
+    background: #000;
+    color: #ffffff;
+    height: 65vh; } }
