@@ -8,43 +8,41 @@
   box-sizing: border-box;
 }
 
-:root {
-  --main-font: "Source Sans Pro", sans-serif;
-  --secondary-font: "Herr Von Muellerhoff", cursive;
-  --body-font: "Cabin", sans-serif;
-  --main-font-color-dark: #252525;
-  --secondary-font-color: #c59d5f;
-  --body-font-color: #515151;
-}
-
 html {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 10px;
-  color: var(--body-font-color);
+  color: #515151;
   scroll-behavior: smooth;
 }
+
 body {
   overflow-x: hidden;
 }
+
 section {
   padding: 3.9rem 0;
   overflow: hidden;
 }
+
 img {
   width: 100%;
   max-width: 100%;
 }
+
 a {
   text-decoration: none;
 }
+
 p {
   font-size: 1.6rem;
 }
+
 /* Navigation
 ================================ */
 nav {
   font-size: 1.6rem;
 }
+
 header {
   width: 100%;
   position: absolute;
@@ -53,36 +51,36 @@ header {
   z-index: 1;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
+
 .brand {
-  /* float: left; */
   padding: 5px 0;
   text-align: center;
   width: 85%;
 }
 .brand .navbar-brand {
   transform: translateX(2rem);
-  /* float: none; */
-}
-div .navbar-brand {
   font-size: 2.5rem;
   padding: 0px;
   margin-left: 0.5rem;
   border-bottom: 3px solid white;
+}
+
+li {
+  list-style: none;
+  margin: 1rem 1.4rem 1rem 0;
 }
 li.active {
   width: 20%;
   padding: 0 5px;
   border-bottom: 2px solid #ffffff;
 }
-li {
-  list-style: none;
-  margin: 1rem 1.4rem 1rem 0;
-}
+
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
+
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -90,40 +88,46 @@ li {
 .custom-toggler.navbar-toggler {
   border-color: rgba(255, 255, 255, 0.6);
 }
-.navbar-bg-custom {
+
+.custom-toggler .navbar-bg-custom {
   background: #0c0c13;
 }
+
 /* Jumbotron 
 =====================*/
 .hero {
   width: 100%;
   height: 100vh;
-  background: url("images/hero.jpg") center no-repeat;
+  background: url("../images/hero.jpg") center no-repeat;
   background-size: cover;
 }
+
 .sub-headline {
   font-size: 11.5rem;
-  font-family: var(--secondary-font);
-  color: var(--secondary-font-color);
+  font-family: "Herr Von Muellerhoff", cursive;
+  color: #c59d5f;
   font-weight: 100;
   line-height: 0.4;
   text-align: center;
   letter-spacing: 2px;
 }
+
 .first-letter {
   text-transform: uppercase;
   font-size: 10.3rem;
 }
+
 .headline {
   color: #ffffff;
   font-size: 5.7rem;
-  font-family: var(--main-font);
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5rem;
   margin-right: -0.5rem;
   text-align: center;
 }
+
 .separator {
   display: flex;
   align-items: center;
@@ -137,27 +141,29 @@ li {
   background-color: #ffffff;
   position: relative;
 }
-.line-right::before,
-.line-left::before {
+.line.line-right::before,
+.line.line-left::before {
   content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border: 0.6rem solid transparent;
 }
-.line-right::before {
+.line.line-right::before {
   border-right-color: #fff;
   right: 0;
 }
-.line-left::before {
+.line.line-left::before {
   border-left-color: #fff;
   left: 0;
 }
+
 .asterisk {
   font-size: 1.2rem;
-  color: var(--secondary-font-color);
+  color: #c59d5f;
   margin: 0 1.6rem;
 }
+
 .headline-description h5 {
   color: #ffffff;
   font-size: 1.4rem;
@@ -168,12 +174,14 @@ li {
   margin-right: -3px;
   text-align: center;
 }
+
 button {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-right: -2px;
 }
+
 .cta-btn {
   font-size: 1.1rem;
   background-color: #ffffff;
@@ -182,32 +190,34 @@ button {
   transition: background-color 0.5s;
 }
 .cta-btn a {
-  color: var(--body-font-color);
+  color: #515151;
   text-decoration: none;
 }
 .cta-btn:hover,
 .cta-btn:focus {
   color: #ffffff;
-  background: var(--secondary-font-color);
+  background: #c59d5f;
 }
 
 /* Our Story
 ============================ */
 .headline-dark {
-  color: var(--main-font-color-dark);
+  color: #252525;
   font-size: 3rem;
-  font-family: var(--main-font);
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5rem;
   margin-right: -0.5rem;
   text-align: center;
 }
+
 .global-headline .sub-headline {
   line-height: 0.52;
 }
+
 .global-headline .asterisk {
-  color: var(--body-font-color);
+  color: #515151;
 }
 
 button {
@@ -217,36 +227,36 @@ button {
   margin-right: -2px;
   position: relative;
 }
-.cta {
+button.cta {
   font-size: 1.5rem;
-  color: var(--secondary-font-color);
+  color: #c59d5f;
   position: relative;
   transition: color 0.3s;
   padding: 0.7rem 0.8rem;
 }
-.cta::before {
+button.cta::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--secondary-font-color);
+  background-color: #c59d5f;
   transition: background-color 0.5s;
 }
-.cta:hover,
-.cta:focus {
-  color: var(--main-font-color-dark);
+button.cta:hover,
+button.cta:focus {
+  color: #252525;
 }
-.cta:hover::before,
-.cta:focus::before {
-  background-color: var(--main-font-color-dark);
+button.cta:hover::before,
+button.cta:focus::before {
+  background-color: #252525;
 }
 
 /* Tasteful Recipes
 =============================*/
 .tasteful-recipes {
-  background: url("./images/tasteful-recipes.jpg") no-repeat;
+  background: url("../images/tasteful-recipes.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -257,12 +267,14 @@ button {
   padding: 5rem;
   overflow: hidden;
 }
+
 .image-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
   margin: 1rem 0;
 }
+
 .restaurant-description {
   padding: 1rem;
 }
@@ -273,24 +285,25 @@ button {
 
 /* Perfect blend */
 .perfect-blend {
-  background: url("./images/perfect-blend.jpg") no-repeat;
+  background: url("../images/perfect-blend.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
 }
+
 /* Culinary Delight
 =============================*/
 .image-group.img-v2 {
   padding: 2rem 4rem;
 }
 
-/* FOOTER
+/* Footer
 =============================*/
 footer {
   background: #000;
   color: #ffffff;
   padding-bottom: 1rem;
 }
-.footer-content h4 {
+footer .footer-content h4 {
   font-size: 1.9rem;
   text-transform: uppercase;
   font-weight: 100;
@@ -298,7 +311,7 @@ footer {
   margin-bottom: 2rem;
   overflow: hidden;
 }
-.footer-content p {
+footer .footer-content p {
   max-width: 50ch;
   margin: 0 auto;
   padding: 2rem 0;
@@ -306,7 +319,7 @@ footer {
   overflow: hidden;
   line-height: 2;
 }
-.back-to-top {
+footer .back-to-top {
   width: 60px;
   height: 60px;
   font-size: 2rem;
@@ -316,28 +329,23 @@ footer {
   transform: translateY(-30px);
   padding: 10px 20px;
 }
-.back-to-top a {
+footer .back-to-top a {
   color: #ffffff;
 }
-.social-icons li {
+footer .social-icons li {
   font-size: 2rem;
   padding: 0;
   margin: 0;
 }
-.social-icons li a {
-  color: var(--secondary-font-color);
+footer .social-icons li a {
+  color: #c59d5f;
+}
+footer .input-group-append button {
+  background: #ffffff;
+  font-size: 1.4rem;
+  padding: 1px;
 }
 
-.input-group-append {
-  position: relative;
-  right: 9px;
-  top: -5px;
-}
-.input-group-text {
-  font-size: 1.7rem;
-  background: #ffffff;
-  border: none;
-}
 /* RESPONSIVENESS 
 =============================*/
 @media screen and (min-width: 400px) {
@@ -365,7 +373,6 @@ footer {
   }
   /* Our Story
 ============================ */
-
   .restaurant-description {
     padding: 5rem;
   }
