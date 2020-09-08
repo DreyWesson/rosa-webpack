@@ -30,7 +30,7 @@ toggler.addEventListener("click", (_) => {
 gsap.from(".first-animation", 1, { opacity: 0, y: -50 });
 gsap.from(".single-animation", 1, { opacity: 0, y: 50 });
 gsap.from(".separator", 1, { opacity: 0, scale: 1.8 });
-tl.from(".asterisk", { rotation: 360, opacity: 0, scale: 2, duration: 1.5 });
+tl.from(".asterisk", { rotation: 360, opacity: 0, scale: 2, duration: 2 });
 // DISCOVER
 gsap.from(".fromLeft", {
   scrollTrigger: {
