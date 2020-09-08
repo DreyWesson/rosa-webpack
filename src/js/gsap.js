@@ -26,13 +26,11 @@ toggler.addEventListener("click", (_) => {
 });
 // }
 
-// HERO
-tl.from(".headline", { scale: 2, opacity: 0 })
-  .from(".sub-headline", { y: 30, opacity: 0 })
-  .from(".asterisk", { rotation: 360, opacity: 0 })
-  .from(".line", { opacity: 0 })
-  .from(".single-animation", { y: 10, opacity: 0 });
-
+// Hero
+gsap.from(".first-animation", 1, { opacity: 0, y: -50 });
+gsap.from(".single-animation", 1, { opacity: 0, y: 50 });
+gsap.from(".separator", 1, { opacity: 0, scale: 1.8 });
+tl.from(".asterisk", { rotation: 360, opacity: 0, scale: 2, duration: 1.5 });
 // DISCOVER
 gsap.from(".fromLeft", {
   scrollTrigger: {
