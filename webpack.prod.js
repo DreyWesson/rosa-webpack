@@ -1,11 +1,11 @@
-const path = require("path");
-const common = require("./webpack.common");
-const merge = require("webpack-merge");
+const path = require("path"),
+  common = require("./webpack.common"),
+  merge = require("webpack-merge"),
+  CleanWebpackPlugin = require("clean-webpack-plugin"),
+  MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin"),
+  TerserPlugin = require("terser-webpack-plugin");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
@@ -26,13 +26,14 @@ module.exports = merge(common, {
         },
       }),
     ],
+    splitChunks: { chunks: "all" },
   },
-  devtool: false,
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
-  },
+  // devtool: false,
+  // performance: {
+  //   hints: false,
+  //   maxEntrypointSize: 512000,
+  //   maxAssetSize: 512000,
+  // },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
     new CleanWebpackPlugin(),

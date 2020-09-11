@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Rosa">
+    <meta name="description" content="Rosa" />
     <link
-    rel="stylesheet"
-    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-    crossorigin="anonymous"
-  />
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async
-  />
-  <!-- Bootstrap CSS -->
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous"
-  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      async
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
   <body class="">
@@ -69,7 +70,7 @@
       </nav>
     </header>
     <section class="hero" id="hero">
-      <div class="container d-flex " style="height: 90vh">
+      <div class="container d-flex" style="height: 90vh">
         <div class="m-auto">
           <div class="first-animation">
             <h1 class="sub-headline h4">
@@ -104,7 +105,7 @@
         <div class="restaurant-info row my-3 py-3">
           <div class="restaurant-description text-center col-md-6">
             <div class="d-flex h-100">
-              <div class="m-auto fromLeft">
+              <div class="m-auto swipe_right">
                 <div class="global-headline">
                   <h1 class="sub-headline h2">
                     <span class="first-letter">D</span>iscover
@@ -131,8 +132,23 @@
           </div>
           <div class="restaurant-info-img col-md-6">
             <div class="d-flex h-100">
-              <div class="m-auto py-5 fromRight">
-                <img src="./images/our-story-1.jpg" alt="" />
+              <div class="m-auto py-5 swipe_left">
+                <!-- <img src="./images/our-story-1.jpg" alt="" /> -->
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="./images/our-story-1-large.jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/our-story-1-medium.jpg"
+                  />
+                  <source
+                    media="(min-width: 465px)"
+                    srcset="./images/our-story-1-small.jpg"
+                  />
+                  <img src="./images/our-story-1-extra_small.jpg" alt="" />
+                </picture>
               </div>
             </div>
           </div>
@@ -144,12 +160,12 @@
       <div class="global-headline">
         <div class="d-flex" style="height: 65vh">
           <div class="m-auto">
-            <div class="animate-top">
+            <div class="swipe_down">
               <h1 class="sub-headline h2">
                 <span class="first-letter">T</span>asteful
               </h1>
             </div>
-            <div class="animate-bottom">
+            <div class="swipe_up">
               <h2 class="headline h1">Recipes</h2>
             </div>
           </div>
@@ -159,15 +175,75 @@
     <!-- Tasteful recipes ends -->
     <section class="discover-our-menu">
       <div class="restaurant-info row">
-        <div class="gallery col-md-6 scaleUp-v1">
+        <div class="gallery col-md-6 scale_up">
           <div class="image-group p-md-5">
-            <img src="./images/menu-group-1.jpg" alt="" />
+            <!-- <img src="./images/menu-group-1.jpg" alt="" />
             <img src="./images/menu-group-2.jpg" alt="" />
             <img src="./images/menu-group-3.jpg" alt="" />
-            <img src="./images/menu-group-4.jpg" alt="" />
+            <img src="./images/menu-group-4.jpg" alt="" /> -->
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./images/menu-group-1-large.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/menu-group-1-medium.jpg"
+              />
+              <source
+                media="(min-width: 465px)"
+                srcset="./images/menu-group-1-small.jpg"
+              />
+              <img src="./images/menu-group-1-extra_small.jpg" alt="" />
+            </picture>
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./images/menu-group-2-large.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/menu-group-2-medium.jpg"
+              />
+              <source
+                media="(min-width: 465px)"
+                srcset="./images/menu-group-2-small.jpg"
+              />
+              <img src="./images/menu-group-2-extra_small.jpg" alt="" />
+            </picture>
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./images/menu-group-3-large.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/menu-group-3-medium.jpg"
+              />
+              <source
+                media="(min-width: 465px)"
+                srcset="./images/menu-group-3-small.jpg"
+              />
+              <img src="./images/menu-group-3-extra_small.jpg" alt="" />
+            </picture>
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./images/menu-group-4-large.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/menu-group-4-medium.jpg"
+              />
+              <source
+                media="(min-width: 465px)"
+                srcset="./images/menu-group-4-small.jpg"
+              />
+              <img src="./images/menu-group-4-extra_small.jpg" alt="" />
+            </picture>
           </div>
         </div>
-        <div class="restaurant-description text-center col-md-6 scaleUp-v2">
+        <div class="restaurant-description text-center col-md-6 scale_up">
           <div class="d-flex h-100">
             <div class="m-auto">
               <div class="global-headline">
@@ -195,12 +271,12 @@
       <div class="global-headline">
         <div class="d-flex" style="height: 65vh">
           <div class="m-auto">
-            <div class="animate-top-v2">
+            <div class="swipe_down">
               <h1 class="sub-headline h2">
                 <span class="first-letter">T</span>he perfect
               </h1>
             </div>
-            <div class="animate-bottom-v2">
+            <div class="swipe_up">
               <h2 class="headline h1">Blend</h2>
             </div>
           </div>
@@ -210,7 +286,7 @@
     <!-- Perfect blend ends -->
     <section class="culinary-delight">
       <div class="restaurant-info row">
-        <div class="restaurant-description col-md-6 text-center scaleUp-v3">
+        <div class="restaurant-description col-md-6 text-center scale_up">
           <div class="d-flex h-100">
             <div class="m-auto">
               <div class="global-headline">
@@ -232,15 +308,49 @@
           </div>
         </div>
         <div class="image-group img-v2 col-md-6">
-          <div class="swipe-down">
-            <img class="animate-top" src="./images/delight-group-1.jpg" alt="" />
-          </div>
-          <div class="swipe-up">
+          <div class="swipe_down">
+            <!-- <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./images/delight-group-1-large.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/delight-group-1-medium.jpg"
+              />
+              <source
+                media="(min-width: 465px)"
+                srcset="./images/delight-group-1-small.jpg"
+              />
+              <img src="./images/delight-group-1-extra_small.jpg" alt="" />
+            </picture> -->
             <img
-              class="animate-bottom"
-              src="./images/delight-group-2.jpg"
-              alt=""
+              src="./images/delight-group-1-extra_small.jpg"
+              srcset="
+                ./images/delight-group-1-extra_small.jpg  500w,
+                ./images/delight-group-1-small.jpg        800w,
+                ./images/delight-group-1-medium.jpg      1200w,
+                ./images/delight-group-1-large.jpg       1500w
+              "
+              sizes="100vw"
             />
+          </div>
+          <div class="swipe_up">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./images/delight-group-2-large.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/delight-group-2-medium.jpg"
+              />
+              <source
+                media="(min-width: 465px)"
+                srcset="./images/delight-group-2-small.jpg"
+              />
+              <img src="./images/delight-group-2-extra_small.jpg" alt="" />
+            </picture>
           </div>
         </div>
       </div>
@@ -250,13 +360,18 @@
       <div class="container text-center">
         <div class="back-to-top">
           <div class="">
-
-            <a href="#" id=""><span><i class="fas fa-chevron-up pointer"><span class="sr-only">home</span></i></span></a>
+            <a href="#" id=""
+              ><span
+                ><i class="fas fa-chevron-up pointer"
+                  ><span class="sr-only">home</span></i
+                ></span
+              ></a
+            >
           </div>
         </div>
         <div class="footer-content">
-          <div class="footer-content-about scaleUp-v4">
-            <h4>About Rosa</h4>
+          <div class="footer-content-about scale_up">
+            <h2>About Rosa</h2>
             <div class="asterisk"><i class="far fa-asterisk"></i></div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
@@ -266,58 +381,86 @@
             </p>
           </div>
           <div class="footer-content-divider row justify-content-around">
-            <div class="social-media d-flex w100">
+            <div class="social-media d-flex w100 swipe_right">
               <div class="m-auto">
-                <h4>Follow along</h4>
+                <h2>Follow along</h2>
                 <ul class="social-icons d-flex justify-content-between">
                   <li>
-                    <a href="#"><i class="fab fa-twitter"><span class="sr-only">Home</span></i></a>
+                    <a href="#"
+                      ><i class="fab fa-twitter roll"
+                        ><span class="sr-only">Home</span></i
+                      ></a
+                    >
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-facebook-square"><span class="sr-only">Home</span></i></a>
+                    <a href="#"
+                      ><i class="fab fa-facebook-square roll"
+                        ><span class="sr-only">Home</span></i
+                      ></a
+                    >
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-pinterest"><span class="sr-only">Home</span></i></a>
+                    <a href="#"
+                      ><i class="fab fa-pinterest roll"
+                        ><span class="sr-only">Home</span></i
+                      ></a
+                    >
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-linkedin"><span class="sr-only">Home</span></i></a>
+                    <a href="#"
+                      ><i class="fab fa-linkedin roll"
+                        ><span class="sr-only">Home</span></i
+                      ></a
+                    >
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-tripadvisor"><span class="sr-only">Home</span></i></a>
+                    <a href="#"
+                      ><i class="fab fa-tripadvisor roll"
+                        ><span class="sr-only">Home</span></i
+                      ></a
+                    >
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="newsletter-container m-4">
-              <h4 class="mb-0">Newsletter</h4>
-              <form action="" class="newsletter-form">
-                  <div class="input-group mb-1">
-                    <input class="" type="text" class="form-control" placeholder="Your email address..." aria-label="Your email address..." aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn " type="button"><i class="fas fa-envelope"></i></button>
-                    </div>
+            <div class="newsletter-container m-4 swipe_left">
+              <h2 class="mb-0">Newsletter</h2>
+              <form action="" class="newsletter-form my-5">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Recipient's username"
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                      Send
+                    </button>
                   </div>
                 </div>
               </form>
+            </div>
           </div>
         </div>
       </div>
     </footer>
     <script
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"
-  ></script>
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
   </body>
