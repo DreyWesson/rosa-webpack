@@ -5,7 +5,9 @@ const path = require("path"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin"),
   TerserPlugin = require("terser-webpack-plugin"),
-  CriticalPlugin = require("critical-plugin");
+  CriticalPlugin = require("critical-plugin"),
+  PurgecssPlugin = require("purgecss-webpack-plugin"),
+  glob = require("glob");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
@@ -27,21 +29,27 @@ module.exports = merge(common, {
         },
       }),
     ],
-    splitChunks: { chunks: "all" },
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.css$/,
+          chunks: "all",
+          enforce: true,
+        },
+      },
+    },
   },
-  // devtool: false,
-  // performance: {
-  //   hints: false,
-  //   maxEntrypointSize: 512000,
-  //   maxAssetSize: 512000,
-  // },
   plugins: [
     new CriticalPlugin({
-      critical: {
-        inline: true,
-      },
+      // critical: {
+      //   inline: true,
+      // },
     }),
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${path.join(__dirname, "src")}/**/*`, { nodir: true }),
+    }),
     new CleanWebpackPlugin(),
   ],
   module: {
