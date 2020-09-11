@@ -4,7 +4,8 @@ const path = require("path"),
   CleanWebpackPlugin = require("clean-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin"),
-  TerserPlugin = require("terser-webpack-plugin");
+  TerserPlugin = require("terser-webpack-plugin"),
+  CriticalPlugin = require("critical-plugin");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
@@ -35,6 +36,11 @@ module.exports = merge(common, {
   //   maxAssetSize: 512000,
   // },
   plugins: [
+    new CriticalPlugin({
+      critical: {
+        inline: true,
+      },
+    }),
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
     new CleanWebpackPlugin(),
   ],
